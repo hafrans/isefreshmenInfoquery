@@ -1,0 +1,128 @@
+/**
+ * Turingca Style Sheet
+ * (c)2016 TCA ALL RIGHTS RESERVED
+ * hafrans@163.com
+ */
+
+body{
+	min-height: 90%;
+	background: #f3f3f3;
+	padding-top: 50px;
+	font-family: "microsoft yahei";
+}
+.hafrans-navbar{
+	position: fixed;
+}
+.myform{
+	width:100%;
+	position: relative;
+	min-height: 35rem; 
+	padding:2rem;
+	border:1px #ABABAB solid;
+	border-radius: 8px;
+	box-shadow: 1px 1px 2px #aaa inset;
+	margin-bottom: 2rem;
+}
+.myform > form {
+	padding: 2rem;
+}
+#result{
+	display: none;
+}
+.hide{
+	display: none;
+}
+#form-ajax{
+}
+.hafrans-cover{
+	width:95%;
+	border-radius: 8px;
+	min-height: 36rem;
+	position: absolute;
+	z-index: 99;
+	background: rgba(255,255,255,0.9);
+	top:0;
+	display: none;
+}
+.hafrans-cover > img{
+	position: absolute;
+	color:darkred;
+	text-align: left;
+	font-size: x-large;
+	top: 50%;
+	left:50%;
+	margin: -32px 0 0 -32px;
+}
+.hafrans-cover > p{
+	width: 250px;
+	height: 30px;
+	position: absolute;
+	color:darkred;
+	text-align: center;
+	font-size: x-large;
+	top: 50%;
+	left:50%;
+	margin: -15px 0 0 -125px;
+}
+@media screen and (max-width:1200px ) {
+	.hafrans-cover{
+		width:97%;
+		border-radius: 8px;
+		min-height: 36rem;
+		position: absolute;
+		z-index: 99;
+		background: rgba(255,255,255,0.9);
+		top:0;
+		display: none;
+	}
+}
+
+@media screen and (max-width:990px ) {
+	.hafrans-cover{
+		width:96%;
+		border-radius: 8px;
+		min-height: 36rem;
+		position: absolute;
+		z-index: 99;
+		background: rgba(255,255,255,0.9);
+		top:0;
+		display: none;
+	}
+}
+
+@media screen and (max-width:600px ) {
+	.hafrans-cover{
+		width:95%;
+		border-radius: 8px;
+		min-height: 36rem;
+		position: absolute;
+		z-index: 99;
+		background: rgba(255,255,255,0.9);
+		top:0;
+		display: none;
+	}
+}
+/**
+ * AUTORESIZE
+ */
+
+@media screen and (max-width: 948px) {
+	h1{
+		font-size: 2.2rem;
+	}
+	
+}
+
+body:after{
+	content: "Powered by TCA & lvzh@hafrans.com";
+	color: #AAAAAA;
+	width:270px;
+	position:relative;
+	left:50%;
+	margin:0 0 0 -135px;
+}
+
+#chart-1{
+	background: rgb(0,200,200);
+}
+

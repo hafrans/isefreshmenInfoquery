@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>济南大学图灵电脑协会-学生信息查询</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<meta name="author" content="hafrans@163.com" />
+		<!--
+			Copy Right (c) 2009 - 2016 Hafrans All Rights Reserved.
+			
+		-->
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-brand">
+						图灵电脑协会
+				</div>
+				<div class="navbar-header">
+				 	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-a" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			    	</button>
+				 </div>
+				 <div class="collapse navbar-collapse navbar-right" id="header-a">
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="//www.turingca.com">首页</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="#">入学查询工具</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<h1 style="text-align: center;">济南大学信息学院学生信息查询</h1>
+			<!--
+            	作者：hafrans@163.com
+            	时间：2016-08-31
+            	描述：AJAX
+            -->
+			<div class="row" id="form-ajax" >
+				<div id="request" class="col-lg-6 col-lg-offset-3 col-sm-12">
+					<div class="myform">
+						<form class="form-horizontal" id="pform" onsubmit="return false;">
+						<div class="form-group">
+							<label class="control-label" for="name">姓名</label>
+							<input autocomplete="off" id="name" class="form-control" name="name" placeholder="请输入姓名" />
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="stunum">学号</label>
+							<input autocomplete="off" id="stunum" class="form-control" name="stunum" placeholder="请输入学号" />
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="admission">录取通知书号码</label>
+							<input autocomplete="off" id="admission" class="form-control" name="admission" placeholder="请输入通知书号码" />
+						</div>
+						<div class="form-group style="text-align:right;"">
+							<input class="btn btn-primary" id="submit" type="button" name="submit" value="查询" />
+						</div>
+						</form>
+
+					</div>
+					<div class="hafrans-cover" id="cover">
+							<img id="status" src="img/status.gif" alt="Loading..."/>
+							<p id="message" style="display: none;">查询中</p>
+					</div>
+				</div>
+				<div id="result" class="col-lg-6 col-lg-offset-3 col-sm-12">
+						<div class="myform">
+							<table class="table-bordered table table-hover">
+								<tr>
+									<th style="width:20%">
+										姓名
+									</th>
+									<td id="result_name">
+										张三
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										学院
+									</th>
+									<td>
+										信息科学与工程学院
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										专业
+									</th>
+									<td id="result_zy">
+										计算机科学与技术
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										班级
+									</th>
+									<td id="result_class">
+										计 1602
+									</td>
+								</tr>
+								<tr>
+									<th style="width:20%">
+										宿舍
+									</th>
+									<td>
+										<span id="result_dormitory">学24 - 301</span>&nbsp;&nbsp;(&nbsp;<span id="result_ren">6</span>人间)
+									</td>
+								</tr>
+								<!-- 舍友  -->
+								<tr>
+									<th rowspan="8" style="width:20%;">
+										你的<br/>舍友
+									</th>
+									<td id="result_tomodati">
+										小赵 ， 小钱 ， 小孙 ， 小李 ， 小周 ， 小吴 ， 小郑 ， 小王
+									</td>
+								</tr>
+
+							</table>
+
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<div class="panel-title">
+										更多干货……
+									</div>
+								</div>
+								<div class="panel-body">
+									<div class="row">
+										<div class="col-md-6">
+											<canvas id="myChart1" width="200" height="200"></canvas>
+										</div>
+										<div class="col-md-6">
+											<canvas id="myChart2" width="200" height="200"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Javascript Here. -->
+		<script type="text/javascript" src="js/chart.js" ></script>
+		<script src="//cdn.bootcss.com/Chart.js/2.2.2/Chart.bundle.min.js"></script>
+		<!--<script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/script.js" ></script>
+		<!--<script type="text/javascript" src="js/npm.js" ></script>-->
+	</body>
+</html>
